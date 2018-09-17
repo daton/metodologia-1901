@@ -5,6 +5,8 @@
  */
 package metodologia.pkg1901;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author juan_
@@ -15,7 +17,10 @@ public class Metodologia1901 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       
+        System.out.println("Hola mundo");
+        JOptionPane.showConfirmDialog(null, "Hola mundo");
+        
     }
     
 }
