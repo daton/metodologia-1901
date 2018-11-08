@@ -9,6 +9,8 @@ package herencia;
  *
  * @author campitos
  */
-public class TarjetaNomina {
-   private int numero;
+public class TarjetaNomina extends Tarjeta{
+ public void pagar(float deposito){
+     setSaldo(getSaldo()+deposito); 
+ }
 }

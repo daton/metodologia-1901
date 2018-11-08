@@ -9,25 +9,10 @@ package herencia;
  *
  * @author campitos
  */
-public class TarjetaCredito {
-    private int numero;
-
-    /**
-     * @return  Este metodo te regresa el valor el numero de tu tarjeta
-     */
-    public int getNumero() {
-        return numero;
+public class TarjetaCredito extends Tarjeta{
+    public void pagar(float deposito){
+        setSaldo((getSaldo()+deposito)-deposito*0.03f); 
     }
-
-    /**
-     * @param numero Aqui debes introducir en los parentesis n valor del numero de tarjeta
-     */
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-   
-   
-           
-           
-           
 }
+
+   

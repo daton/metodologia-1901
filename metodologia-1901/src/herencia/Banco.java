@@ -13,17 +13,45 @@ public class Banco {
     
     public static void main(String[] args) {
         //Primero creamos una tarjeta credito
-        TarjetaCredito t1=new TarjetaCredito();
-        //le asignamos un numero
-        t1.setNumero(666);
+       TarjetaCredito tcredito=new TarjetaCredito();
+       tcredito.setNumero(1234); 
+       tcredito.setNombre("banamex");
+       tcredito.setTipo("credito");
+       tcredito.setSaldo(100);
+       
+       TarjetaAhorro tarjetaAhorro=new TarjetaAhorro();
+       tarjetaAhorro.setNumero(4321);
+       tarjetaAhorro.setNombre("bancomer");
+       tarjetaAhorro.setTipo("ahorro");
+       tarjetaAhorro.setSaldo(100);
+       
+       TarjetaNomina tnomina=new TarjetaNomina();
+       tnomina.setNumero(777); 
+       tnomina.setNombre("hsbc");
+       tnomina.setTipo("nomina"); 
+       tnomina.setSaldo(100); 
+       
+       //Generamos el codigo del deposito
+       //Vamos a hacerlo de la forma más básica
+       
+       //Tarjeta de nomina
+      // tnomina.pagar(150);
+       //Tarjeta de ahorro
+       //tarjetaAhorro.pagar(150);
+      // tcredito.pagar(150);
+       
+       //Generamo un arreglo de tarjetas
+       Tarjeta tarjetas[]=new Tarjeta[3];
+       tarjetas[0]=tnomina;
+       tarjetas[1]=tcredito;
+       tarjetas[2]=tarjetaAhorro;
+       
+       //Iteramos el arreglo
+       for(Tarjeta t: tarjetas){
+           t.pagar(150);
+           System.out.println("Saldo es "+t.getSaldo()+" tipo "+t.getTipo());
+       }
         
-        TarjetaAhorro t2=new TarjetaAhorro();
-        
-        
-     //   TarjetaNomina t3=new TarjetaNomina();
-     //   t3.numero=-666;
-
-        System.out.println("El numero de la tarjeta t3 es "+t1.getNumero());
         
     }
     
